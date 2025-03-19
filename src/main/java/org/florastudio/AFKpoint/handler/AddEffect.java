@@ -16,7 +16,7 @@ public class AddEffect {
 
         Integer titleFadein = 1*20;
         Integer titleFadeout = 2*20;
-        Integer timeout = Integer.MAX_VALUE;
+        Integer timeout = 100000000;
 
         if (GoesAfk) {
             List<String> listTitle = AFKpoint.getInstance().getConfig().getStringList("afk-messages.titles");
