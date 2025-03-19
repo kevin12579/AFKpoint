@@ -1,0 +1,30 @@
+# These are the messages that will be randomly displayed when a player goes AFK.
+# Default colour codes and hex colours are supported use #<code>
+# If you just want a subtitle to be displayed, simply set one title message with line '&f '
+afk-messages:
+  titles:
+    - '&#458a43You''ve gone AFK!'
+  subtitles:
+    - '&#79bd77AFK, again?'
+    - '&bAre you coming back?'
+    - '&#79bd77Hey... where''d you go?'
+
+# These are the messages shown when a player returns from being AFK.
+# Default colour codes and hex colours are supported use #<code>
+# If you just want a subtitle to be displayed, simply set one title message with line '&f '
+return-messages:
+  titles:
+    - '&#458a43You''re no longer AFK!'
+  subtitles:
+    - '&#79bd77Welcome back, we missed you!'
+    - '&aYay, you''re back!'
+
+# The effect given to players when AFK.
+afk-effect:
+  enabled: true
+  effect: 'BLINDNESS'
+
+afk-sounds:
+  enabled: true
+  afk: 'UI_CARTOGRAPHY_TABLE_TAKE_RESULT'
+  return: 'UI_LOOM_SELECT_PATTERN'

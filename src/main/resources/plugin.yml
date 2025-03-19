@@ -1,0 +1,11 @@
+name: AFKpoint
+version: '1.0'
+author: hunseong
+main: org.florastudio.AFKpoint.AFKpoint
+api-version: '1.21'
+description: player get point when player in AFK.
+depend: [Essentials]
+softdepend: [PlaceholderAPI]
+commands:
+  잠수포인트:
+    description: Base command for AFKpoint
