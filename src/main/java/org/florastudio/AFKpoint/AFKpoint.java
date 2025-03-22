@@ -6,10 +6,12 @@ import org.bukkit.event.Listener;
 import org.bukkit.plugin.java.JavaPlugin;
 import org.florastudio.AFKpoint.core.HexColor;
 import org.florastudio.AFKpoint.core.placeholderAPI_Message;
+import org.florastudio.AFKpoint.database.JsonManager;
 import org.florastudio.AFKpoint.event.playerAfkEvent;
 import org.florastudio.AFKpoint.event.playerJoinEvent;
-import org.florastudio.AFKpoint.handler.AddEffect;
+import org.florastudio.AFKpoint.main.AddEffect;
 import org.florastudio.AFKpoint.command.Command;
+import org.florastudio.AFKpoint.main.AddPoint;
 
 import java.util.Objects;
 
@@ -19,13 +21,16 @@ public final class AFKpoint extends JavaPlugin implements Listener {
         private HexColor hexColor;
         private AddEffect addEffect;
         private placeholderAPI_Message placeholderAPIMessage;
-
+        private AddPoint addPoint;
+        private JsonManager jsonManager;
         @Override
         public void onEnable(){
             instance = this;
             hexColor = new HexColor();
             addEffect = new AddEffect();
+            addPoint = new AddPoint();
             placeholderAPIMessage = new placeholderAPI_Message();
+            jsonManager = new JsonManager();
             long startTime = System.currentTimeMillis();
 
             getServer().getPluginManager().registerEvents(this, this);
@@ -71,4 +76,6 @@ public final class AFKpoint extends JavaPlugin implements Listener {
         public placeholderAPI_Message getPlaceholderAPIMessage(){
             return placeholderAPIMessage;
         }
+        public AddPoint getAddPoint() { return addPoint; }
+        public JsonManager getJsonManager() {return jsonManager;}
     }

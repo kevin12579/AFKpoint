@@ -1,4 +1,4 @@
-package org.florastudio.AFKpoint.handler;
+package org.florastudio.AFKpoint.main;
 
 import me.clip.placeholderapi.PlaceholderAPI;
 import net.md_5.bungee.api.ChatColor;
@@ -36,6 +36,8 @@ public class AddEffect {
                 player.getLocation().getWorld().playSound(player.getLocation(), Sound.valueOf(AFKpoint.getInstance().getConfig().getString("afk-sounds.afk")), 1.0F, 1.0F);
             }
 
+            AFKpoint.getInstance().getAddPoint().addPlayerAfk(player);
+
 
         } else {
             List<String> wbListTitle = AFKpoint.getInstance().getConfig().getStringList("return-messages.titles");
@@ -56,6 +58,8 @@ public class AddEffect {
             if (AFKpoint.getInstance().getConfig().getString("afk-sounds.enabled").equalsIgnoreCase("true")) {
                 player.getLocation().getWorld().playSound(player.getLocation(), Sound.valueOf(AFKpoint.getInstance().getConfig().getString("afk-sounds.return")), 1.0F, 1.0F);
             }
+
+            AFKpoint.getInstance().getAddPoint().removePlayerAfk(player);
 
         }
     }
