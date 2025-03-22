@@ -40,4 +40,15 @@ public class JsonManager {
             e.printStackTrace();
         }
     }
+
+    public long getAfkPoint(UUID uuid) {
+        JSONArray data = getData();
+        for (Object obj : data) {
+            JSONObject playerData = (JSONObject) obj;
+            if (playerData.get("uuid").equals(uuid.toString())) {
+                return (long) playerData.get("point");
+            }
+        }
+        return 0; // 데이터가 없으면 기본값 0 반환
+    }
 }
