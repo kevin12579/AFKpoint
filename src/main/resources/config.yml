@@ -1,30 +1,23 @@
-# These are the messages that will be randomly displayed when a player goes AFK.
-# Default colour codes and hex colours are supported use #<code>
-# If you just want a subtitle to be displayed, simply set one title message with line '&f '
 afk-messages:
   titles:
-    - '&#458a43You''ve gone AFK!'
+    - '&#458a43잠수중...'
   subtitles:
-    - '&#79bd77AFK, again?'
-    - '&bAre you coming back?'
-    - '&#79bd77Hey... where''d you go?'
+    - '&#79bd77잠수포인트를 획득중입니다.'
 
-# These are the messages shown when a player returns from being AFK.
-# Default colour codes and hex colours are supported use #<code>
-# If you just want a subtitle to be displayed, simply set one title message with line '&f '
 return-messages:
   titles:
-    - '&#458a43You''re no longer AFK!'
+    - '&#458a43잠수 해제'
   subtitles:
-    - '&#79bd77Welcome back, we missed you!'
-    - '&aYay, you''re back!'
+    - '&#79bd77어서오세요!'
 
-# The effect given to players when AFK.
+#AFK돌입 이벤트
 afk-effect:
   enabled: true
   effect: 'BLINDNESS'
-
+#AFK돌입 사운드
 afk-sounds:
   enabled: true
   afk: 'UI_CARTOGRAPHY_TABLE_TAKE_RESULT'
   return: 'UI_LOOM_SELECT_PATTERN'
+
+# %AFKpoint_Point% - 플레이어 포인트 변수 입니다.

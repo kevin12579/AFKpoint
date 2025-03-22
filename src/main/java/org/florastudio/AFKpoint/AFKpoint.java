@@ -9,6 +9,7 @@ import org.florastudio.AFKpoint.core.placeholderAPI_Message;
 import org.florastudio.AFKpoint.database.JsonManager;
 import org.florastudio.AFKpoint.event.playerAfkEvent;
 import org.florastudio.AFKpoint.event.playerJoinEvent;
+import org.florastudio.AFKpoint.expansion.placeholderAPI;
 import org.florastudio.AFKpoint.main.AddEffect;
 import org.florastudio.AFKpoint.command.Command;
 import org.florastudio.AFKpoint.main.AddPoint;
@@ -51,6 +52,7 @@ public final class AFKpoint extends JavaPlugin implements Listener {
             }
 
             if (papiAvailable){
+                new placeholderAPI().register();
                 getLogger().info("PlaceholderAPI와 연결되었습니다.");
             } else {
                 getLogger().severe("PlaceholderAPI 플러그인 미확인. AFKpoint 플러그인 비활성화...");
